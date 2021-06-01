@@ -15,6 +15,6 @@ public class UserDTO {
      * avatar : /pages/2.png
      */
 
-    private String unionId;
+    private String openId;
     private String avatar;
 }

@@ -29,9 +29,9 @@ public class DetailDTO {
     private String title;
     private Integer time;
     private Integer seeCount;
-    private Boolean seen;
     private Integer likeCount;
     private Boolean liked;
+    private List<String> images;
     private UserDTO user;
     private List<CommentDTO> comment;
 }

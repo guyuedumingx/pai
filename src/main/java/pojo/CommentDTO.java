@@ -19,7 +19,7 @@ public class CommentDTO {
      * liked : true
      */
 
-    private String unionId;
+    private String openId;
     private String nickName;
     private Integer time;
     private String content;
