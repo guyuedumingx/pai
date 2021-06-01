@@ -26,5 +26,5 @@ public class SimpleCard {
     private String title;
     private Integer seeCount;
     private User user;
-    private List<String> images;
+    private String image;
 }

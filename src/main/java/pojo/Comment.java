@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
  */
 @NoArgsConstructor
 @Data
-public class CommentDTO {
+public class Comment {
     /**
      * unionId :
      * nickName :

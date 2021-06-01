@@ -14,4 +14,12 @@ public interface UserDao {
      * @return 用户列表
      */
     List<User> getAllUsers();
+
+    boolean add(User user);
+
+    int update(User user);
+
+    int delete(String openId);
+
+    User getUserById(String openId);
 }

@@ -6,4 +6,5 @@
     <select id="getAllUsers" resultType="pojo.User" >
     select * from USER
     </select>
+
 </mapper>

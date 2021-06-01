@@ -6,21 +6,42 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @author yohoyes
  * @date 2021/5/30 17:31
  */
 public class HttpUtil {
+
+    public static String buildParams(Map<String,String> map) {
+        StringBuilder sb = new StringBuilder();
+        Set<String> strings = map.keySet();
+        Iterator<String> iterator = strings.iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            String value = map.get(key);
+            sb.append(key+"="+value);
+            if(iterator.hasNext()){
+                sb.append("&");
+            }
+        }
+        return sb.toString();
+    }
+
+    public static String doGet(String url, Map<String,String> map) {
+        return doGet(url, buildParams(map));
+    }
     /**
      * 向指定URL发送GET方法的请求
      * @param url 发送请求的URL
      * @param param 请求参数，请求参数应该是 name1=value1&name2=value2 的形式。
      * @return URL 所代表远程资源的响应结果
      */
-    public static String sendGet(String url, String param) {
+    public static String doGet(String url, String param) {
         String result = "";
         BufferedReader in = null;
         try {
@@ -69,7 +90,7 @@ public class HttpUtil {
      *            请求参数，请求参数应该是 name1=value1&name2=value2 的形式。
      * @return 所代表远程资源的响应结果
      */
-    public static String sendPost(String url, String param) {
+    public static String doPost(String url, String param) {
         PrintWriter out = null;
         BufferedReader in = null;
         String result = "";

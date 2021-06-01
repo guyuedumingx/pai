@@ -33,5 +33,16 @@ public class Card {
     private Boolean liked;
     private List<String> images;
     private User user;
-    private List<CommentDTO> comment;
+    private List<Comment> comment;
+
+    public SimpleCard convertToSimpleCard() {
+        SimpleCard card = new SimpleCard();
+        card.setId(id);
+        card.setContent(content);
+        card.setTitle(title);
+        card.setSeeCount(seeCount);
+        card.setUser(user);
+        card.setImage(images.get(0));
+        return card;
+    }
 }
