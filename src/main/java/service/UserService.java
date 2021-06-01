@@ -1,7 +1,6 @@
 package service;
 
 import pojo.User;
-import pojo.UserDTO;
 
 /**
  * @author Florence
@@ -12,26 +11,26 @@ public interface UserService {
      * @param user 用户对象
      * @return
      */
-    boolean addUser(UserDTO user);
+    boolean addUser(User user);
 
     /**
      *
      * @param user 用户对象
      * @return 是否成功
      */
-    boolean deleteUser(UserDTO user);
+    boolean deleteUser(User user);
 
     /**
      *
      * @param user 用户对象
      * @return 是否成功
      */
-    boolean editUser(UserDTO user);
+    boolean editUser(User user);
 
     /**
      *
      * @param user 用户对象
      * @return 是否成功
      */
-    UserDTO getUser(UserDTO user);
+    User getUser(User user);
 }

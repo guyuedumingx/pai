@@ -1,6 +1,6 @@
 package service.impl;
 
-import pojo.UserDTO;
+import pojo.User;
 import service.UserService;
 
 /**
@@ -8,22 +8,22 @@ import service.UserService;
  */
 public class UserServiceImpl implements UserService {
     @Override
-    public boolean addUser(UserDTO user) {
+    public boolean addUser(User user) {
         return false;
     }
 
     @Override
-    public boolean deleteUser(UserDTO user) {
+    public boolean deleteUser(User user) {
         return false;
     }
 
     @Override
-    public boolean editUser(UserDTO user) {
+    public boolean editUser(User user) {
         return false;
     }
 
     @Override
-    public UserDTO getUser(UserDTO user) {
+    public User getUser(User user) {
         return null;
     }
 }

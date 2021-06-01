@@ -1,7 +1,7 @@
 package service.impl;
 
-import pojo.CardDTO;
-import pojo.DetailDTO;
+import pojo.SimpleCard;
+import pojo.Card;
 import service.CardService;
 
 import java.util.List;
@@ -11,12 +11,12 @@ import java.util.List;
  */
 public class CardServiceImpl implements CardService {
     @Override
-    public List<CardDTO> getCards(int currentPage) {
+    public List<SimpleCard> getCards(int currentPage) {
         return null;
     }
 
     @Override
-    public DetailDTO cardDetails(int cardId) {
+    public Card cardDetails(int cardId) {
         return null;
     }
 }

@@ -18,9 +18,7 @@ public class CommentDTO {
      * likeCount : 11
      * liked : true
      */
-
-    private String openId;
-    private String nickName;
+    private User user;
     private Integer time;
     private String content;
     private Integer likeCount;

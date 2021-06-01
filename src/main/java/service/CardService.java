@@ -1,9 +1,8 @@
 package service;
 
-import pojo.CardDTO;
-import pojo.DetailDTO;
+import pojo.SimpleCard;
+import pojo.Card;
 
-import javax.smartcardio.Card;
 import java.util.List;
 
 /**
@@ -15,7 +14,7 @@ public interface CardService {
      * @param currentPage 当前页数
      * @return 卡片列表
      */
-    List<CardDTO> getCards(int currentPage);
+    List<SimpleCard> getCards(int currentPage);
 
 
     /**
@@ -23,5 +22,5 @@ public interface CardService {
      * @param cardId 卡片id
      * @return 卡片详情
      */
-    DetailDTO cardDetails(int cardId);
+    Card cardDetails(int cardId);
 }
